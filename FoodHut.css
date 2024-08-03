@@ -1,0 +1,585 @@
+*{
+
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+
+}
+
+
+body{
+    background-color: #343A40 !important;
+}
+
+/* start nav */
+
+.navBar{
+padding: 20px 0px;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background-color: transparent; /* در ابتدا پس‌زمینه شفاف است */
+transition: background-color 0.5s ease-in-out;
+z-index: 999;
+}
+
+
+.navBar.scrolled {
+  background-color: #343A40; /* رنگ پس‌زمینه دلخواه */
+}
+
+
+/* /
+.title { */
+  /* display: none !important; */
+  /* text-align: center !important; */
+  /* z-index: 1000; */
+/* }  */
+ 
+/* .nav-title .scrolled h1{
+  display: block !important;
+  z-index: 10;
+}  */
+
+
+.active {
+  color: red !important;
+}
+
+.nav-items{
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+}
+
+.show-background {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-item-active a {
+
+    color: rgb(175, 16, 16);
+    
+}
+
+.nav-items a{
+
+    color: white !important;
+    
+    }
+
+ .nav-title{
+
+ color: rgb(175, 16, 16);
+
+}
+
+.link-box{
+
+background-color:  rgb(175, 16, 16);
+padding: 10px 15px;
+border-radius: 5px;
+
+}
+
+/* end nav */
+
+/* start header */
+
+    .hidden{
+      visibility: hidden;
+    }
+
+    header{
+        background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)) ,url('pic/main.jpg');
+        background-size: cover;
+        background-position: center;
+        min-height: 800px;
+    }
+
+
+    .header-items{
+
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 200px 0px;
+
+       }
+
+
+    .header-items h1{
+
+     color: white;
+     font-size: 88px;
+     padding: 10px 0px;
+
+    }
+
+
+    .header-items h3{
+
+        color: white;
+        font-size: 56px;
+        padding: 10px 0px;
+    }
+
+
+    .header-items a{
+
+        background-color:  rgb(175, 16, 16);
+        padding: 20px 25px;
+        border-radius: 5px;
+        margin: 50px 0px;
+        text-decoration: none;
+        color: white;
+        padding: 15px 40px;
+        font-size: 20px;
+    }
+
+/* end header */
+
+  /* start about   */
+
+
+  .about-items{
+
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .text-about{
+
+    padding: 50px 150px;
+
+  }
+
+
+  .about-items img{
+
+    width: 600px;
+    height: 700px;
+  }
+
+  .about-items p{
+
+    width: 90%;
+    font-weight: 400;
+    line-height: 30px;
+    padding-top: 20px;
+  }
+
+  .about-items h3{
+
+    font-size: 40px;
+
+  }
+
+
+  /* end about */
+
+
+  /* start menu */
+
+  .menu-items h2{
+
+    font-size: 100px;
+    color: white;
+  }
+  .menu-item img{
+    z-index: -1;
+  }
+  .menu-text h3{
+
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    padding: 100px 0px;
+
+  }
+
+  .white{
+
+    background-color: white;
+    transition-duration: 0.5s;
+    z-index: 5;
+  }
+
+  
+
+  .div-container:hover::after {
+    opacity: 1;
+  }
+
+  .div-container:hover{
+
+    z-index: 1000;
+    backdrop-filter: blur(100%);
+  }
+
+  .div-container::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-size:50px;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition:opacity 0.5s;
+  }
+
+  .div-container {
+    position: relative; /* برای قرارگیری مطلق لایه تیره */
+    overflow: hidden; /* برای مخفی کردن قسمت اضافی لایه تیره */
+  }
+    
+  .image {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out; /* انیمیشن تغییر شفافیت */
+    position: relative; /* برای قرارگیری مطلق لایه تیره */
+    width: 100%; /* عرض عکس را به اندازه ظرفش تنظیم کنید */
+    height: auto; /* ارتفاع عکس به صورت خودکار تنظیم شود */
+  }
+  
+  .div-container:hover .image {
+    opacity: 0.5; /* کاهش شفافیت هنگام هاور */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .div-container:hover .overlay {
+    opacity: 1; /* نمایش لایه تیره هنگام هاور */
+  }
+  
+ 
+   /* end menu   */
+
+
+   /* start BOOK */
+
+
+   .BOOK{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('pic/book-table-img.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+
+   }
+
+   .BOOK-text h3{
+
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    padding: 100px 0px;
+
+   }
+
+   .BOOK-items{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+   }
+
+   .BOOK-items input{
+
+    color: white;
+    width: 20%;
+    padding: 10px 5px;
+    background-color: transparent;
+    border: 2px solid white;
+    transition-duration: 0.5s;
+    font-size: 20px;
+
+   }
+
+   .BOOK-items input:hover{
+
+    border: 2px double rgb(175, 16, 16) ;
+
+   }
+
+   .BOOK-items input::placeholder{
+
+    color: white;
+
+   }
+
+   .BOOK-btn a{
+
+    background-color:rgb(175, 16, 16) ;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 20px 35px;
+    border-radius: 3px;
+    font-size: 20px;
+   }
+
+   .BOOK-btn{
+
+    margin: 100px 0px;
+
+   }
+
+   /* end BOOK */
+
+   /* start FOODHUT */
+
+   .FOODHUT-items{
+
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 100px 0px;
+   }
+
+   .FOODHUT-item{
+
+    border: 0.5px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px 30px;
+
+   }
+
+   .FOODHUT-item p{
+    width:100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px 0px;
+   }
+
+   .FOODHUT-item h4{
+
+    font-size: 30px;
+    padding: 5px 0px;
+  
+   }
+
+   .FOODHUT-item a{
+
+    background-color:rgb(175, 16, 16) ;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 36px;
+    border-radius: 3px;
+    margin: 25px 0px;
+    font-weight:700;
+   }
+
+
+   .FOODHUT-item img{
+
+    width: 100%;
+
+   }
+
+
+   .FOODHUT-top{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+   }
+
+   .FOODHUT-top h2{
+    color: white;
+    font-size: 64px;
+    padding-top: 80px;
+   }
+
+   .FOODHUT-btn{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px;
+
+   }
+
+   .FOODHUT-btn a{
+
+    background-color: rgb(175, 16, 16);
+    padding: 10px 80px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 3px;
+
+   }
+
+
+   /* end FOODHUT */
+
+
+/* start REVIEWS  */
+
+.REVIEWS-items{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 70px 0px;
+}
+
+.REVIEWS-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+.REVIEWS-top h2{
+
+ font-size: 64px;
+ color: white;
+ text-align: center;
+ padding: 20px 0px;
+}
+
+.REVIEWS-item h3{
+
+  font-size: 30px;
+  color: white;
+
+}
+
+.REVIEWS-item h6{
+
+  font-size: 12px;
+  color: #f8f9fa;
+  padding: 20px 0px;
+}
+.REVIEWS-item-box{
+  
+  border: 0.5px solid gray;
+  text-align: center;
+  padding: 10px 10px;
+  border-top: 0.5px solid rgb(175, 16, 16);
+}
+
+.REVIEWS-item-box p{
+
+  color:#f8f9fa ;
+  text-align: center;
+  width: 100%;
+}
+
+/* end REVIEWS  */
+
+/* start FIND US */
+
+.FINDUS-items{
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.FINDUS-item-image{
+
+ margin: 35px 0px;
+ margin-left: 30px;
+ 
+}
+
+.FINDUS-item-image img{
+
+  border-radius: 5px;
+  width: 600px;
+  height: 500px;
+}
+
+.FINDUS-item-text{
+
+ margin: 130px 0px;
+ margin-right: 30px;
+ margin-left: 100px;
+ }
+
+.FINDUS-item-text h3{
+
+ font-size:40px;
+ color: white;
+ padding-bottom: 10px;
+}
+
+.FINDUS-item-text p{
+
+ font-size: 16px;
+ color: #f8f9fa;
+ width: 100%;
+}
+
+.item-address{
+
+ display: flex;
+ justify-content: space-between;
+ padding-top: 10px;
+}
+
+.item-address i{
+
+  color: gray;
+  font-size: 20px;
+  padding-right: 10px;
+ }
+
+ .item-address p{
+
+  color: gray;
+  font-size:16px;
+ }
+
+
+
+/* end FIND US */
+   
+.address-items{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 100px 0px;
+}
+
+.address-item h3{
+ font-size: 40px;
+ color:white;  
+ font-weight: 400;
+ text-align: center;
+}
+
+.address-item p{
+  font-size: 20px;
+  color: gray;
+  text-align: center;
+}
